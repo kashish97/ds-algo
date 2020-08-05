@@ -4,6 +4,7 @@ public class LinkedListImpl {
 
     public static void main(String [] args){
 
+
         LinkedList linkedList = new LinkedList();
         insertAtEnd(linkedList,1);
         insertAtEnd(linkedList,4);
@@ -12,12 +13,13 @@ public class LinkedListImpl {
         insertAtFront(linkedList,9);
         insertAtPosition(linkedList,11,2);
         insertAtPosition(linkedList,0,5);
-        //deleteAtPosition(linkedList,5);
-        //deleteAtPosition(linkedList,2);
-        //deleteAtFront(linkedList);
-        //deleteAtEnd(linkedList);
-        deleteData(linkedList,9);
+//      deleteAtPosition(linkedList,5);
+//      deleteAtPosition(linkedList,2);
+//      deleteAtFront(linkedList);
+//      deleteAtEnd(linkedList);
+//      deleteData(linkedList,9);
         printList(linkedList);
+
     }
 
     public static void insertAtEnd(LinkedList linkedList, int data){
@@ -85,6 +87,9 @@ public class LinkedListImpl {
     public static void deleteAtPosition(LinkedList linkedList,int position){
         LinkedList.Node head = linkedList.head;
         int counter = 1;
+        if(position == 1){
+            deleteAtFront(linkedList);
+        }
         if(head==null){
             System.out.println("Linked List is null cant delete");
         }
@@ -131,7 +136,5 @@ public class LinkedListImpl {
             current = current.next;
         }
     }
-
-
 
 }

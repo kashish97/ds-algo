@@ -4,8 +4,6 @@ public class LinkedList {
 
     Node head;
 
-
-
     public void setHead(Node head) {
         this.head = head;
     }
