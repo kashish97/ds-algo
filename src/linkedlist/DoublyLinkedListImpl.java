@@ -9,6 +9,8 @@ public class DoublyLinkedListImpl {
         insertAtEnd(doublyLinkedList,1);
         insertAtFront(doublyLinkedList,-1);
         insertAtPosition(3,-9,doublyLinkedList);
+        //deleteAtEnd(doublyLinkedList);
+        deleteAtPosition(doublyLinkedList,3);
         printReverseList(doublyLinkedList);
         printList(doublyLinkedList);
     }
@@ -66,6 +68,44 @@ public class DoublyLinkedListImpl {
                 current = current.next;
             }
 
+        }
+    }
+
+    public static void deleteAtFront(DoublyLinkedList doublyLinkedList){
+        if(doublyLinkedList.head==null){
+            return;
+        }
+        else{
+            doublyLinkedList.head.next.previous = doublyLinkedList.head.previous;
+            doublyLinkedList.head = doublyLinkedList.head.next;
+        }
+    }
+
+    public static void deleteAtEnd(DoublyLinkedList doublyLinkedList){
+        if(doublyLinkedList.tail==null){
+            return;
+        }
+        else {
+            doublyLinkedList.tail.previous.next = doublyLinkedList.tail.next;
+            doublyLinkedList.tail = doublyLinkedList.tail.previous;
+        }
+    }
+
+    public static void deleteAtPosition(DoublyLinkedList doublyLinkedList,int position){
+        int counter = 1;
+        if(position == 1){
+            deleteAtFront(doublyLinkedList);
+        }
+        else{
+            DoublyLinkedList.Node current = doublyLinkedList.head;
+            while (current.next!=null){
+                if(counter+1==position){
+                    current.next.next.previous = current;
+                    current.next = current.next.next;
+                }
+                counter+=1;
+                current = current.next;
+            }
         }
     }
 
