@@ -9,26 +9,21 @@ public class QuickSort {
             System.out.print(intArray[i] + " ");
         }
         System.out.println(" ");
-
         minimise(intArray, 0, 9);
         System.out.print("Output Array ");
-
         for (int i = 0; i < intArray.length; i++) {
            System.out.print(intArray[i] + " ");
-        }}
-
-
+        }
+    }
     public static void minimise(int [] arr,int start,int end){
         if(start<end) {
             int partition = partition(start, end, arr);
             minimise(arr, start, partition - 1);
             minimise(arr, partition + 1, end);
         }
-
     }
 
     public static int partition(int start,int end,int [] arr){
-
         int i = start-1;
         int pivot = end;
         for(int j = start;j<=end;j++){
@@ -44,5 +39,4 @@ public class QuickSort {
         arr[pivot] = temp;
         return i+1;
     }
-
 }

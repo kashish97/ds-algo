@@ -5,7 +5,6 @@ public class DoublyLinkedList {
     Node head;
     Node tail;
 
-
     static class Node{
         int data;
         Node next;
