@@ -13,9 +13,10 @@ public class PowerFunction {
         if(n>2){
         for(int i =2;i<=n;i++){
             newNum *= k;
-        }}
-        else if(n<=2){
-            newNum = k*k;
+        }
+        }
+        else if(n==0){
+            newNum = 1;
         }
         return newNum;
     }
