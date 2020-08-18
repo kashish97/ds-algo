@@ -8,19 +8,20 @@ public class MaxAndMinInArray {
 
     }
     public static ArrayList<Integer> findingMinMax(ArrayList<Integer> arr) {
+        // write your awesome code here
         ArrayList<Integer> arr1 = new ArrayList<>();
-       int max = arr.get(0);
-       int min = arr.get(0);
-       for(int i = 0;i<arr.size();i++){
-           if(arr.get(i)>=max){
-               max = arr.get(i);
-           }
-           else{
-               min = arr.get(i);
-           }
-       }
-       arr1.add(min);
-       arr1.add(max);
-       return arr1;
+        int max = arr.get(0);
+        int min = arr.get(0);
+        for(int i = 0;i<arr.size();i++){
+            if(arr.get(i)>max){
+                max = arr.get(i);
+            }
+            else if(arr.get(i)<min){
+                min = arr.get(i);
+            }
+        }
+        arr1.add(min);
+        arr1.add(max);
+        return arr1;
     }
 }
