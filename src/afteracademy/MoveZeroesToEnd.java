@@ -20,8 +20,6 @@ public class MoveZeroesToEnd {
        ArrayList<Integer>  arr1 = moveZeroes(input);
         printArray(arr1);
 
-
-
     }
 
     public static  ArrayList<Integer> moveZeroes(ArrayList<Integer> arr) {
