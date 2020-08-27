@@ -11,7 +11,6 @@ public class ReverseBits {
         //String b = reverse(a);
         int c = getDecimalFromBinary(a);
         System.out.println(c);
-
     }
 
     public static String getBinaryFromDecimal(int n){
@@ -21,7 +20,6 @@ public class ReverseBits {
             a+=String.valueOf(n%2);
             n = n/2;
         }
-
         return a;
     }
 
@@ -32,7 +30,6 @@ public class ReverseBits {
             double multiply = Math.pow(2,pow);
             sum+=(Integer.parseInt(String.valueOf(s.charAt(i))))*multiply;
             pow++;
-
         }
        // System.out.println(sum);
         return ((int) sum);
